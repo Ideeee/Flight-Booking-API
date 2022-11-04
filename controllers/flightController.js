@@ -23,7 +23,7 @@ exports.allFlights = async (req,res) => {
         const flights = Flights.model;
         if(!flights) return res.status(500).send("Server error");
         
-        return res.status(200).json(flights);
+        return res.status(200).json({"All flights" : flights});
     }
     catch(e){
         return res.json({message : e.message});
